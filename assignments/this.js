@@ -90,8 +90,3 @@ const lambda = {
     }
 }
 studentInfo.call(lambda);
-
-// const anu = new StudentName('Anu', 'Apt')
-// const toyin = new StudentName('Toyin', 'Apt')
-
-// anu.StudentName.call(toyin); // give Toyin Apt
