@@ -71,7 +71,6 @@ function Humanoid (childAttributes) {
 
 Humanoid.prototype = Object.create(CharacterStats.prototype);
 
-
 /*
   * Inheritance chain: GameObject -> CharacterStats -> Humanoid
   * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
