@@ -36,9 +36,6 @@ GameObject.prototype.destroy = function () {
 function CharacterStats (childAttributes) {
   GameObject.call(this, childAttributes);
   this.healthPoints = childAttributes.healthPoints;
-  this.takeDamage = function() {
-    return `${this.name} offers a greeting in ${this.language}.`
-  }
 }
 
 // CharacterStats.prototype.takeDamage = function () {
@@ -46,6 +43,10 @@ function CharacterStats (childAttributes) {
 // }
 
 CharacterStats.prototype = Object.create(GameObject.prototype);
+
+GameObject.prototype.takeDamage = function() {
+  return `${this.name} offers a greeting in ${this.language}.`
+}
 
 
 
@@ -64,12 +65,14 @@ function Humanoid (childAttributes) {
   this.team = childAttributes.team;
   this.weapons = childAttributes.weapons;
   this.language = childAttributes.language;
-  this.greet = function() {
-    return `${this.name} offers a greeting in ${this.language}.`
-  }
+  
 }
 
 Humanoid.prototype = Object.create(CharacterStats.prototype);
+
+Humanoid.prototype.greet = function() {
+  return `${this.name} offers a greeting in ${this.language}.`
+}
 
 /*
   * Inheritance chain: GameObject -> CharacterStats -> Humanoid
