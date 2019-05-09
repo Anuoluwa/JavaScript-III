@@ -14,15 +14,8 @@
 // code example for Window Binding
 
 function sayAge () {
-    console.log(`My age is ${this.age}`)
+    console.log(this)
   }
-  
-  const user = {
-    name: 'Anu',
-    age: 26
-  }
-
-  window.age = 27
 
   sayAge() // My age is undefined
 
@@ -50,7 +43,7 @@ student.getClass();
 
 // code example for New Binding
 
-function Employee (name, email, password, mealTicket) {
+function Employee (name, email, password) {
     this.name = name,
     this.email = email,
     this.password = password,

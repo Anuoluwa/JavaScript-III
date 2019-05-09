@@ -38,15 +38,12 @@ function CharacterStats (childAttributes) {
   this.healthPoints = childAttributes.healthPoints;
 }
 
-// CharacterStats.prototype.takeDamage = function () {
-//   return ` ${this.name} took damage.`;
-// }
-
 CharacterStats.prototype = Object.create(GameObject.prototype);
 
-GameObject.prototype.takeDamage = function() {
-  return `${this.name} offers a greeting in ${this.language}.`
+CharacterStats.prototype.takeDamage = function () {
+  return ` ${this.name} took damage.`;
 }
+
 
 
 
